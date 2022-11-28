@@ -1,4 +1,4 @@
-#Money Track App
+##Money Track App
 
 App based on need of tracking incomes and outgoings.
 
