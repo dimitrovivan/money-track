@@ -6,7 +6,7 @@ import { NextPage } from 'next';
 /**
  * Internal dependencies
  */
-import Layout from '../components/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
 
 const Homepage: NextPage = () => (
   <Layout>
