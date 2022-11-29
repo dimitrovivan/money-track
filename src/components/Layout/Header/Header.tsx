@@ -1,12 +1,20 @@
+/**
+ * External dependencies
+ */
+import Link from 'next/link';
+
+/**
+ * Internal dependencies
+ */
 import Logo from '@/svg/logo.svg';
 
 const Header = () => {
   return (
     <div>
-      <div className="flex justify-center">
-        <div className="max-w-xs">
+      <div>
+        <Link href='/' >
           <Logo className="w-full" />
-        </div>
+        </Link>
       </div>
     </div>
   )
