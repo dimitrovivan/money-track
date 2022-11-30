@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app'
 /**
  * Internal dependencies
  */
-import '../styles/globals.css'
+import '../styles/main.scss';
 
 const MoneyTrackApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />

@@ -13,7 +13,7 @@ const Header = () => {
     <div>
       <div>
         <Link href='/' >
-          <Logo className="w-full" />
+          {/* <Logo className="w-full" /> */}
         </Link>
       </div>
     </div>

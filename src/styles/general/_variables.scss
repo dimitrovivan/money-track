@@ -1,0 +1,77 @@
+@use "sass:map";
+
+$colorList: (
+);
+
+$bodyFontSize: 16px;
+$bodyLineHeight: 1.275;
+$headingLineHeight: 1.25;
+
+$headingSizes: (
+  "h1": (
+    40px,
+    55px,
+    96px,
+  ),
+  "h2": (
+    27px,
+    37px,
+    64px,
+  ),
+  "h3": (
+    40px,
+    40px,
+    45px,
+  ),
+  "h4": (
+    20px,
+    20px,
+    36px,
+  ),
+  "h5": (
+    15px,
+    15px,
+    20px,
+  ),
+);
+
+$maxWidth: 1920px;
+$containerPaddingDesktop: 40px;
+$containerPaddingMobile: 10px;
+
+$themeList: (
+  "black": (
+    "bg": map.get($colorList, "black"),
+    "fg": map.get($colorList, "warm"),
+  ),
+  "warm": (
+    "bg": map.get($colorList, "warm"),
+    "fg": map.get($colorList, "black"),
+  ),
+  "white": (
+    "bg": map.get($colorList, "white"),
+    "fg": map.get($colorList, "black"),
+  ),
+  "cold": (
+    "bg": map.get($colorList, "cold"),
+    "fg": map.get($colorList, "black"),
+  ),
+  "primary": (
+    "bg": map.get($colorList, "primary"),
+    "fg": map.get($colorList, "white"),
+  ),
+);
+
+$responsive-ios: 812px;
+
+$breakpoints: (
+  mobile-small: 374px,
+  mobile-medium: 575px,
+  mobile: 767px,
+  small-tablet: 860px,
+  tablet: 1023px,
+  small-desktop: 1199px,
+  desktop: 1399px,
+  large-desktop: 1599px,
+  huge-desktop: 2100px,
+);

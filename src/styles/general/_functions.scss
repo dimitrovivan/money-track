@@ -1,0 +1,38 @@
+@use "sass:math";
+@use "variables" as *;
+
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min + .02, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $breakpoints) {
+	$max: map-get($breakpoints, $name);
+	@return if($max != 0, $max, null);
+}
+
+@function is-number($value) {
+  @return type-of($value) == "number";
+}
+
+@function stripUnit($number) {
+  @if is-number($number) and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function rem($size: 0) {
+  $unitlessSize: stripUnit($size);
+  $unitlessBase: stripUnit($bodyFontSize);
+
+  @return math.div($unitlessSize, $unitlessBase) * 1rem;
+}
+
+@function em($size: 0) {
+  $unitlessSize: stripUnit($size);
+  $unitlessBase: stripUnit($bodyFontSize);
+
+  @return math.div($unitlessSize, $unitlessBase) * 1em;
+}

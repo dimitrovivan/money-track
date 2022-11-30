@@ -1,0 +1,46 @@
+.shell {
+  max-width: 1741px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  &--smaller {
+    max-width: 700px;
+  }
+}
+
+.shell-center {
+  max-width: 1420px;
+  padding: 0 50px;
+  margin: 0 auto;
+
+  &--small {
+    max-width: 960px;
+  }
+
+  &--smaller {
+    max-width: 700px;
+  }
+}
+
+.mid-shell {
+  max-width: 1360px;
+  padding-right: 40px;
+  margin-left: 27.5%;
+
+  @include breakpoint-down(large-desktop) {
+    margin-left: 20%;
+  }
+
+  @include breakpoint-down(small-desktop) {
+    margin-left: 10%;
+  }
+
+  @include breakpoint-down(tablet) {
+    margin-left: 0;
+    padding: 0 50px 0 100px;
+  }
+
+  @include breakpoint-down(mobile) {
+    padding: 0 50px;
+  }
+}
